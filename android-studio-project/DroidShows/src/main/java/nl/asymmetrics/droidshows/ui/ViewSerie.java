@@ -102,11 +102,11 @@ public class ViewSerie extends Activity
       serieNameV.setText(serieName);
   
       ImageView posterThumbV = (ImageView) findViewById(R.id.posterThumb);
-      try {
-        BitmapDrawable posterThumbD = (BitmapDrawable) BitmapDrawable.createFromPath(posterThumb);
-        posterThumbD.setTargetDensity(getResources().getDisplayMetrics().densityDpi);  // Don't auto-resize to screen density
-        posterThumbV.setImageDrawable(posterThumbD);
-      }
+			try {
+				BitmapDrawable posterThumbD = (BitmapDrawable) BitmapDrawable.createFromPath(posterThumb);
+				posterThumbD.setTargetDensity(getResources().getDisplayMetrics().densityDpi);	// Don't auto-resize to screen density
+				posterThumbV.setImageDrawable(posterThumbD);
+			}
       catch (Exception e) {}
           
       List<String> genres = new ArrayList<String>();
